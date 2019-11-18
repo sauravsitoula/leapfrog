@@ -83,7 +83,7 @@
 .box {
     width: auto;
     height: 10px;
-    background-image: url("../image/head-ruler.png");
+    background-image: url("../images/head-ruler.png");
 }
 
 .header-bottom {
@@ -285,7 +285,7 @@
 
 .our-team-bottom .block .details {
     height: 310px;
-    background-image: url("../image/background.png");
+    background-image: url("../images/background.png");
 }
 
 .button-holder {
@@ -295,12 +295,12 @@
     left: 36px;
     bottom: 8px;
     border: none;
-    background-image: url('../image/button.png');
+    background-image: url('../images/button.png');
     color: faffff;
 }
 
 .block:hover .button-holder {
-    background-image: url("../image/button-hover.png");
+    background-image: url("../images/button-hover.png");
 }
 
 .block:hover .hover-details {
@@ -628,7 +628,7 @@
 }
 
 .footer-ruler {
-    background-image: url("../image/footer-ruler.png");
+    background-image: url("../images/footer-ruler.png");
     height: 19px;
     background-repeat: repeat-x;
 }
@@ -693,7 +693,7 @@ span {
     font-size: 14px;
     color: #faffff;
     padding-bottom: 14px;
-    list-style-image: url("../image/footer-list-arrow.png");
+    list-style-image: url("../images/footer-list-arrow.png");
 }
 
 .column2 .company-list {
@@ -711,7 +711,7 @@ span {
     font-size: 14px;
     color: #faffff;
     padding-bottom: 14px;
-    list-style-image: url("../image/footer-list-arrow.png");
+    list-style-image: url("../images/footer-list-arrow.png");
 }
 
 .column3 .community {
