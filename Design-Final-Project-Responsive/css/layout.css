@@ -482,6 +482,23 @@ footer .footer-top-container .col-4 .comments .comment-top {
     display: block;
 }
 
+.column-right .slider-image-holder {
+    height: 230px;
+    padding-top: 38px;
+}
+
+.column-right .facebook-image-holder {
+    height: 250px;
+    padding-top: 42px;
+}
+
+.column-right .logo-image-holder {
+    height: 22px;
+    margin: 0 auto;
+    padding-top: 38px;
+    padding-top: 42px;
+}
+
 @media only screen and (max-width: 360px) {
     .body-container .column-right {
         display: none;
