@@ -1,0 +1,30 @@
+.app {
+    height: 500px;
+    width: 500px;
+    border: 1px solid black;
+    margin: 0 auto;
+    position: relative;
+}
+
+.box {
+    background: url(./images/ants.jpg);
+    position: absolute;
+}
+
+button {
+    margin-left: 40%;
+    margin-top: 10px;
+}
+
+#gameOverMessage {
+    position: absolute;
+    width: 500px;
+    height: 300px;
+    background: lightgray;
+    top: 100px;
+}
+
+#gameOverMessage h2 {
+    margin-left: 24%;
+    margin-top: 100px;
+}

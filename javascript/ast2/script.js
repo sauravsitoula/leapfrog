@@ -149,6 +149,8 @@ function CarouselConstructor(container) {
         if (PREVIOUS_BUTTON_SET || AUTO_SLIDE_SET) {
             return;
         }
+        // clearTimeout(clearTimeOutFirstSlide);
+        // clearTimeout(clearTimeOutNextSlide);
         PREVIOUS_BUTTON_SET = true;
         var count = 0;
         var self = this;
@@ -161,6 +163,7 @@ function CarouselConstructor(container) {
                 // console.log('RETURN DUE TO COMPLETION')
                 INDICATOR_DOTS[toSendForRemovingClassName].classList.add("active");
                 self.removeActiveStateFromDotClasses(toSendForRemovingClassName);
+                setTimeout(function() { self.autoSlideImages() }, 3000)
                 return;
             }
             if (IMAGE_WRAPPER_LEFT === 0) {
@@ -178,6 +181,8 @@ function CarouselConstructor(container) {
         if (NEXT_BUTTON_SET || AUTO_SLIDE_SET) {
             return;
         }
+        // clearTimeout(clearTimeOutFirstSlide);
+        // clearTimeout(clearTimeOutNextSlide);
         NEXT_BUTTON_SET = true;
         var count = 0;
         var self = this;

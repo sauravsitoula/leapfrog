@@ -158,9 +158,9 @@ function CarouselConstructor(container) {
                 // console.log('RETURN DUE TO 0 LEFT')
                 return;
             }
-            IMAGE_WRAPPER_LEFT += 5;
+            IMAGE_WRAPPER_LEFT += 10;
             self.imageHolder.style.left = IMAGE_WRAPPER_LEFT + "px";
-            count += 5;
+            count += 10;
         }, 1);
     };
     this.onClickNextButton = function() {
@@ -185,9 +185,9 @@ function CarouselConstructor(container) {
                 NEXT_BUTTON_SET = false;
                 return;
             }
-            IMAGE_WRAPPER_LEFT -= 5;
+            IMAGE_WRAPPER_LEFT -= 10;
             self.imageHolder.style.left = IMAGE_WRAPPER_LEFT + "px";
-            count += 5;
+            count += 10;
         }, 1);
     };
     // console.log(this.carouselContainer, this.imageHolder, this.image)
