@@ -134,7 +134,7 @@ function Game(parentElement, boxCount) {
             boxDiv.draw();
             boxes.push(boxDiv);
         }
-        setInterval(this.moveBoxes.bind(this), 30);
+        setInterval(this.moveBoxes.bind(this), 10);
     };
     this.moveBoxes = function() {
         var displayChecker = false;
@@ -170,5 +170,5 @@ function testFunc() {
 
 var parentElement = Array.from(document.getElementsByClassName('app'));
 parentElement.forEach(function(item, index) {
-    new Game(item, 10).startGame();
+    new Game(item, 8).startGame();
 });

@@ -1,0 +1,31 @@
+body {
+    background: rgb(14, 1, 46);
+    margin: 0px;
+    padding: 0px;
+    position: relative;
+}
+
+.container {
+    background: black;
+    width: 33.25em;
+    height: 720px;
+    margin: 0 auto;
+    position: relative;
+    overflow: hidden;
+}
+
+.road-container {
+    position: relative;
+}
+
+img {
+    max-width: 100%;
+}
+
+.player-car-container {
+    background: url(./images/car-1-resize.png)
+}
+
+.generated-car-container {
+    background: url(./images/car-3-resize.png)
+}
