@@ -255,7 +255,6 @@ function Game(parentElement, index) {
         }
     };
     this.removeBullet = function() {
-        // console.log('remove bullet called')
         parentElement.removeChild(bullet);
         bullet = null;
         bulletY = 565;
@@ -344,9 +343,7 @@ function Game(parentElement, index) {
     };
     this.bulletCollision = function() {
         var loopLength = generatedCars.length;
-        console.log(loopLength)
         for (var i = 0; i < loopLength; i++) {
-            console.log('inside for loop')
             if (
                 bulletY <= generatedCars[i].y + generatedCars[i].clientHeight &&
                 bulletX > generatedCars[i].x &&
@@ -357,35 +354,11 @@ function Game(parentElement, index) {
                     index: i
                 };
                 return true;
-            } else {
-                return false;
             }
         }
         return false;
     };
 
-    // this.bulletHitDetector = function() {
-    //     console.log('function')
-    //     for (var p = 0; p < 4; p++) {
-    //         console.log('inside for loop')
-    //             // console.log(generatedCars[j].x, generatedCars[j].y, generatedCars.length);
-    //             // if (
-    //             //     bulletY <= generatedCars[j].y + generatedCars[j].clientHeight &&
-    //             //     bulletX > generatedCars[j].x &&
-    //             //     bulletX <
-    //             //     generatedCars[j].x + generatedCars[j].clientWidth
-    //             // ) {
-    //             //     returnFromBulletHitDetector = {
-    //             //         car: generatedCars[j],
-    //             //         index: j
-    //             //     };
-    //             //     return true
-    //             // } else {
-    //             //     return false;
-    //             // }
-    //         return false;
-    //     }
-    // };
     this.gameLoop = function() {
         counter = counter + 1;
         if (score % 20 === 0 && score !== 0) {
@@ -399,13 +372,12 @@ function Game(parentElement, index) {
 
             var toRemoveCar = self.bulletCollision(generatedCars[i]);
             if (toRemoveCar === true) {
-                console.log('collision detected')
+                console.log(returnFromBulletHitDetector)
                 self.removeBullet();
                 moveBullet = false;
-                returnFromBulletHitDetector.car.removeCar(); //
-                generatedCars.splice(i, 1);
+                returnFromBulletHitDetector.car.removeCar();
+                generatedCars.splice(returnFromBulletHitDetector.index, 1);
                 score++;
-                returnFromBulletHitDetector = false;
             }
         }
         road.style.top = generatedCarSpeed + roadStartingPostion + "px";
