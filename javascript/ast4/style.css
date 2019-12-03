@@ -10,7 +10,7 @@ body {
     width: 33.25em;
     height: 720px;
     margin: 0 auto;
-    position: relative;
+    position: absolute;
     overflow: hidden;
 }
 
@@ -29,3 +29,13 @@ img {
 .generated-car-container {
     background: url(./images/car-3-resize.png)
 }
+
+
+/* 
+#container-1 {
+    margin-left: 10px;
+}
+
+#container-2 {
+    margin-left: 500px;
+} */
