@@ -8,7 +8,7 @@ function Pipe_Top(parentElement, index) {
     this.width = 100
     this.createPipe = function() {
         var pipe = document.createElement('div');
-        pipe.setAttribute('style', 'position: absolute; width: 100px; background: url(./images/actual-pole.png);');
+        pipe.setAttribute('style', 'position: absolute; width: 100px; background: url(./images/pipe-top.png); background-size: contain');
         pipe.classList.add('dynamic');
         this.parentElement.appendChild(pipe);
         this.element = pipe;
@@ -42,7 +42,7 @@ function Pipe_Bottom(parentElement, index) {
     this.width = 100;
     this.createPipe = function() {
         var pipe = document.createElement('div');
-        pipe.setAttribute('style', 'position: absolute; width: 100px; background: url(./images/actual-pole.png);');
+        pipe.setAttribute('style', 'position: absolute; width: 100px; background: url(./images/pipe-bottom.png);');
         pipe.classList.add('dynamic');
         this.parentElement.appendChild(pipe);
         this.element = pipe;
