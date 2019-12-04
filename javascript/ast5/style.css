@@ -1,0 +1,18 @@
+body {
+    margin: 0px;
+    padding: 0px;
+}
+
+.container {
+    height: 660px;
+    width: 650px;
+    border: 1px solid black;
+    position: absolute;
+    top: 0px;
+    overflow: hidden;
+}
+
+img {
+    width: 100%;
+    height: auto;
+}
