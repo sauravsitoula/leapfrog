@@ -9,7 +9,6 @@ function Game(parentElement, index) {
     var counter = 0;
     var accelaration = 0;
     var accelarationValue = 9.8;
-    var gameScore = 0;
     var bird_position = null;
     var pipeSpeed = 3;
     var topHeight = null;
@@ -17,10 +16,6 @@ function Game(parentElement, index) {
     this.startGame = function() {
         bird = new Bird(parentElement).createBird();
         bird_position = bird.y;
-        gameScore = document.createElement('div1');
-        gameScore.setAttribute('style', 'width: 30px; height: 20px; position: relative; top 0px; left: 600px; background: yellow; color: red; font-size: 25px; font-weight: bold; z-index: 200');
-        gameScore.classList.add('dynamic');
-        parentElement.appendChild(gameScore)
         document.addEventListener("keydown", self.keyDownHandler);
         game_loop = setInterval(self.gameLoop, 17);
     };
@@ -97,7 +92,6 @@ function Game(parentElement, index) {
                 score = score + 0.5;
             }
         }
-        gameScore.innerHTML = score + '';
     };
     this.removePipe = function(pipe, index) {
         parentElement.removeChild(pipe.element);
