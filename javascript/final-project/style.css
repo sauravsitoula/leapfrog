@@ -1,0 +1,12 @@
+body {
+    padding: 0px;
+    margin: 0px;
+}
+
+.game-container {
+    width: 1200px;
+    height: 700px;
+    overflow: hidden;
+    position: relative;
+    margin: 0 auto;
+}
