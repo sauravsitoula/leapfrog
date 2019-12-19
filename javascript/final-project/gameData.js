@@ -34,8 +34,5 @@ gameData = {
     },
     level_3: {
 
-    },
-    level_4: {
-
     }
 }

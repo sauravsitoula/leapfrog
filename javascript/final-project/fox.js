@@ -1,7 +1,11 @@
-function Fox(parentElement, intial_X_position, initial_Y_position, destination_x, destination_y, angle, waveNumber) {
+function Fox(parentElement, intial_X_position, initial_Y_position, destination_x, destination_y, angle, waveNumber, id) {
+    this.iceEffectCounter = 0;
     this.element = null;
+    this.id = id;
+    this.maxHealth = 100;
     this.health = 100;
-    this.speed = 2;
+    this.initialSpeed = 1.5;
+    this.speed = 1.5;
     this.width = 12;
     this.height = 18;
     this.x = null;
@@ -62,5 +66,11 @@ function Fox(parentElement, intial_X_position, initial_Y_position, destination_x
     this.draw = function() {
         this.element.style.top = this.y + 'px';
         this.element.style.left = this.x + 'px';
+    }
+    this.increaseIceEffectCounter = function() {
+        this.iceEffectCounter++;
+    }
+    this.resetIceEffectCounter = function() {
+        this.iceEffectCounter = 0;
     }
 }

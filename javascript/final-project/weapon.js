@@ -16,6 +16,7 @@ var Weapon = function(
     this.x = x;
     this.y = y;
     this.element = null;
+    this.towerType = towerType
     this.damage = damage;
     this.source = {
         x: x,

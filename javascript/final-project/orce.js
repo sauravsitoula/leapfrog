@@ -1,7 +1,11 @@
-function Orce(parentElement, intial_X_position, initial_Y_position, destination_x, destination_y, angle, waveNumber) {
+function Orce(parentElement, intial_X_position, initial_Y_position, destination_x, destination_y, angle, waveNumber, id) {
+    this.iceEffectCounter = 0;
     this.element = null;
+    this.id = id;
+    this.maxHealth = 100;
     this.health = 100;
-    this.speed = 1;
+    this.initialSpeed = 1.5;
+    this.speed = 1.5;
     this.width = 12;
     this.height = 18;
     this.x = null;
@@ -19,12 +23,18 @@ function Orce(parentElement, intial_X_position, initial_Y_position, destination_
     this.destIndex = 1;
     this.createOrce = function() {
         var orce = document.createElement('div');
-        orce.setAttribute('style', 'position: absolute; background: orange; width: 12px; height: 18px;')
+        orce.setAttribute('style', 'position: absolute; background: green; width: 12px; height: 18px;')
         orce.classList.add('dynamic');
         this.element = orce;
         parentElement.appendChild(this.element);
         this.setInitialPosition();
         return this;
+    }
+    this.updateHealth = function(value) {
+        this.health = this.health - value;
+    }
+    this.heal = function(heal) {
+        this.health = this.health + heal;
     }
     this.setSource = function(x, y) {
         this.source.x = x;
@@ -56,5 +66,11 @@ function Orce(parentElement, intial_X_position, initial_Y_position, destination_
     this.draw = function() {
         this.element.style.top = this.y + 'px';
         this.element.style.left = this.x + 'px';
+    }
+    this.increaseIceEffectCounter = function() {
+        this.iceEffectCounter++;
+    }
+    this.resetIceEffectCounter = function() {
+        this.iceEffectCounter = 0;
     }
 }

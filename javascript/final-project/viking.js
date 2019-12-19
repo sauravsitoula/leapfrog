@@ -1,16 +1,13 @@
-function Wizard(parentElement, intial_X_position, initial_Y_position, destination_x, destination_y, angle, waveNumber) {
-    this.element = null;
-    this.wizard = true;
-    this.increaseHealth = 40;
+function Viking(parentElement, intial_X_position, initial_Y_position, destination_x, destination_y, angle, waveNumber, id) {
     this.iceEffectCounter = 0;
+    this.element = null;
+    this.id = id;
     this.maxHealth = 100;
-    this.counter = 0;
     this.health = 100;
     this.initialSpeed = 1.5;
     this.speed = 1.5;
     this.width = 12;
     this.height = 18;
-    this.range = 60;
     this.x = null;
     this.y = null;
     this.waveNumber = waveNumber;
@@ -24,23 +21,21 @@ function Wizard(parentElement, intial_X_position, initial_Y_position, destinatio
     }
     this.angle = angle;
     this.destIndex = 1;
-    this.createWizard = function() {
-        var wizard = document.createElement('div');
-        wizard.setAttribute('style', 'position: absolute; background: white; width: 12px; height: 18px;')
-        wizard.classList.add('dynamic');
-        this.element = wizard;
+    this.createViking = function() {
+        console.log('inside here')
+        var viking = document.createElement('div');
+        viking.setAttribute('style', 'position: absolute; background: black; width: 12px; height: 18px;')
+        viking.classList.add('dynamic');
+        this.element = viking;
         parentElement.appendChild(this.element);
         this.setInitialPosition();
         return this;
     }
-    this.heal = function(heal) {
-        this.health = this.health + heal;
-    }
-    this.increaseCounter = function() {
-        this.counter++;
-    }
     this.updateHealth = function(value) {
         this.health = this.health - value;
+    }
+    this.heal = function(heal) {
+        this.health = this.health + heal;
     }
     this.setSource = function(x, y) {
         this.source.x = x;
