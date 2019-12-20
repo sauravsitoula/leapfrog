@@ -644,7 +644,7 @@ function Game(parentElement) {
     };
     this.checkWizard = function(wizard) {
         wizard.increaseCounter();
-        if (wizard.counter % 600 == 0) {
+        if (wizard.counter % 400 == 0) {
             self.wizardHeal(wizard);
         }
     };
