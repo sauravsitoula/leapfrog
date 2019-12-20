@@ -23,7 +23,7 @@ function Game(parentElement) {
     var charactersStatus = [];
     var slowedCharacters = [];
     var points = 1000;
-    var numberLeftToLoose = 1;
+    var numberLeftToLoose = 12;
     var game_loop = null;
     var setTimeOutTest = 0;
     var selectTower = null;
@@ -706,7 +706,7 @@ function Game(parentElement) {
         charactersStatus = [];
         slowedCharacters = [];
         points = 1000;
-        numberLeftToLoose = 5;
+        numberLeftToLoose = 12;
         game_loop = null;
         setTimeOutTest = 0;
         selectTower = null;

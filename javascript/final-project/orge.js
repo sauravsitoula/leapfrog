@@ -24,7 +24,7 @@ function Orge(parentElement, intial_X_position, initial_Y_position, destination_
     this.createOrge = function() {
         var orge = document.createElement('div');
         orge.setAttribute('style', 'position: absolute;width: 24px; height: 32px;');
-        orge.style.backgroundImage = 'url(../anime/orge-running.gif)'
+        orge.style.backgroundImage = 'url(./images/orge-running.gif)'
         orge.classList.add('dynamic');
         this.element = orge;
         parentElement.appendChild(this.element);

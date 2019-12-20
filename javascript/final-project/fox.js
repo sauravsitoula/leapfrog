@@ -25,7 +25,7 @@ function Fox(parentElement, intial_X_position, initial_Y_position, destination_x
     this.createFox = function() {
         var fox = document.createElement('div');
         fox.setAttribute('style', 'position: absolute; width: 18px; height: 24px;');
-        fox.style.backgroundImage = 'url(../anime/fox-running.gif)'
+        fox.style.backgroundImage = 'url(./images/fox-running.gif)'
         fox.classList.add('dynamic');
         this.element = fox;
         parentElement.appendChild(this.element);

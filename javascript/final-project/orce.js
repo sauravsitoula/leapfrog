@@ -24,7 +24,7 @@ function Orce(parentElement, intial_X_position, initial_Y_position, destination_
     this.createOrce = function() {
         var orce = document.createElement('div');
         orce.setAttribute('style', 'position: absolute; width: 18px; height: 24px;');
-        orce.style.backgroundImage = 'url(../anime/orce-running.gif)'
+        orce.style.backgroundImage = 'url(./images/orce-running.gif)'
         orce.classList.add('dynamic');
         this.element = orce;
         parentElement.appendChild(this.element);

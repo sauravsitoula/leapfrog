@@ -27,7 +27,7 @@ function Wizard(parentElement, intial_X_position, initial_Y_position, destinatio
     this.createWizard = function() {
         var wizard = document.createElement('div');
         wizard.setAttribute('style', 'position: absolute;width: 18px; height: 24px;');
-        wizard.style.backgroundImage = 'url(../anime/wizard-running.gif)'
+        wizard.style.backgroundImage = 'url(./images/wizard-running.gif)'
         wizard.classList.add('dynamic');
         this.element = wizard;
         parentElement.appendChild(this.element);

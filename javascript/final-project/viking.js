@@ -24,7 +24,7 @@ function Viking(parentElement, intial_X_position, initial_Y_position, destinatio
     this.createViking = function() {
         var viking = document.createElement('div');
         viking.setAttribute('style', 'position: absolute;width: 18px; height: 24px;');
-        viking.style.backgroundImage = 'url(../anime/viking-running.gif)';
+        viking.style.backgroundImage = 'url(./images/viking-running.gif)';
         viking.classList.add('dynamic');
         this.element = viking;
         parentElement.appendChild(this.element);
