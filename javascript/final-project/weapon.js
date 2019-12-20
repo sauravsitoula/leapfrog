@@ -30,18 +30,27 @@ var Weapon = function(
     this.speed = speed;
     this.createWeapon = function() {
         var weapon = document.createElement("div");
-        weapon.setAttribute("style", "position: absolute; background: white;");
+        weapon.setAttribute("style", "position: absolute;");
         weapon.classList.add("dynamic");
+        if (towerType == 'ice') {
+            weapon.style.backgroundColor = 'white';
+        } else if (towerType == 'magic') {
+            weapon.style.backgroundColor = 'lightBlue';
+        } else if (towerType == 'cannon') {
+            weapon.style.backgroundColor = 'black';
+        } else if (towerType == 'archer') {
+            var rotateAngle = Math.atan2(self.source.y - self.destination.y, self.source.x - self.destination.x) * 180 / Math.PI
+            weapon.style.transform = 'rotate(' + rotateAngle + 'deg)';
+            weapon.style.backgroundColor = 'black';
+        }
         weapon.style.width = width + 'px';
         weapon.style.height = height + 'px';
         weapon.style.top = y + 'px';
         weapon.style.left = x + 'px';
+        weapon.style.borderRadius = '50%';
         this.element = weapon;
         parentElement.appendChild(weapon);
-        if (towerType = 'archer') {
-            var rotateAngle = Math.atan2(self.source.y - self.destination.y, self.source.x - self.destination.x) * 180 / Math.PI
-            weapon.style.transform = 'rotate(' + rotateAngle + 'deg)';
-        }
+
         return this;
     };
     this.move = function(x, y) {

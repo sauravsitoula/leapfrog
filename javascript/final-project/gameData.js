@@ -2,37 +2,78 @@ gameData = {
     level_1: {
         wave: {
             wave_1: {
-                animal: "fox",
-                amount: 1
+                amount: 12
             },
             wave_2: {
-                animal: "goblin",
                 amount: 12
             },
             wave_3: {
-                animal: "goblin",
-                amount: 25
+                amount: 16
             },
             wave_4: {
-                animal: "viking",
-                amount: 15
+                amount: 5
             }
         },
         tower: {
             towerNumber: 3,
             towerCoordinates: [
-                [224, 284],
-                [400, 400],
-                [300, 400]
-                // [500,500],
-                // [600,600]
+                [230, 272],
+                [457, 423],
+                [803, 220]
+
             ]
         }
     },
     level_2: {
+        wave: {
+            wave_1: {
+                amount: 8
+            },
+            wave_2: {
+                amount: 14
+            },
+            wave_3: {
+                amount: 18
+            },
+            wave_4: {
+                amount: 7
+            }
+        },
+        tower: {
+            towerNumber: 4,
+            towerCoordinates: [
+                [321, 412],
+                [616, 502],
+                [904, 427],
+                [665, 222]
 
+            ]
+        }
     },
     level_3: {
+        wave: {
+            wave_1: {
+                amount: 14
+            },
+            wave_2: {
+                amount: 18
+            },
+            wave_3: {
+                amount: 20
+            },
+            wave_4: {
+                amount: 10
+            }
+        },
+        tower: {
+            towerNumber: 4,
+            towerCoordinates: [
+                [84, 373],
+                [322, 117],
+                [590, 501],
+                [853, 113]
 
+            ]
+        }
     }
 }

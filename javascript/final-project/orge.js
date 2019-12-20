@@ -3,7 +3,7 @@ function Orge(parentElement, intial_X_position, initial_Y_position, destination_
     this.element = null;
     this.id = id;
     this.maxHealth = 100;
-    this.health = 100;
+    this.health = 200;
     this.initialSpeed = 1.5;
     this.speed = 1.5;
     this.width = 12;
@@ -23,7 +23,8 @@ function Orge(parentElement, intial_X_position, initial_Y_position, destination_
     this.destIndex = 1;
     this.createOrge = function() {
         var orge = document.createElement('div');
-        orge.setAttribute('style', 'position: absolute; background: red; width: 12px; height: 18px;')
+        orge.setAttribute('style', 'position: absolute;width: 24px; height: 32px;');
+        orge.style.backgroundImage = 'url(../anime/orge-running.gif)'
         orge.classList.add('dynamic');
         this.element = orge;
         parentElement.appendChild(this.element);

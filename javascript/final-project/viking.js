@@ -3,7 +3,7 @@ function Viking(parentElement, intial_X_position, initial_Y_position, destinatio
     this.element = null;
     this.id = id;
     this.maxHealth = 100;
-    this.health = 100;
+    this.health = 500;
     this.initialSpeed = 1.5;
     this.speed = 1.5;
     this.width = 12;
@@ -22,9 +22,9 @@ function Viking(parentElement, intial_X_position, initial_Y_position, destinatio
     this.angle = angle;
     this.destIndex = 1;
     this.createViking = function() {
-        console.log('inside here')
         var viking = document.createElement('div');
-        viking.setAttribute('style', 'position: absolute; background: black; width: 12px; height: 18px;')
+        viking.setAttribute('style', 'position: absolute;width: 18px; height: 24px;');
+        viking.style.backgroundImage = 'url(../anime/viking-running.gif)';
         viking.classList.add('dynamic');
         this.element = viking;
         parentElement.appendChild(this.element);

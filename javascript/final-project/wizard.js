@@ -5,7 +5,7 @@ function Wizard(parentElement, intial_X_position, initial_Y_position, destinatio
     this.iceEffectCounter = 0;
     this.maxHealth = 100;
     this.counter = 0;
-    this.health = 100;
+    this.health = 120;
     this.initialSpeed = 1.5;
     this.speed = 1.5;
     this.width = 12;
@@ -26,7 +26,8 @@ function Wizard(parentElement, intial_X_position, initial_Y_position, destinatio
     this.destIndex = 1;
     this.createWizard = function() {
         var wizard = document.createElement('div');
-        wizard.setAttribute('style', 'position: absolute; background: white; width: 12px; height: 18px;')
+        wizard.setAttribute('style', 'position: absolute;width: 18px; height: 24px;');
+        wizard.style.backgroundImage = 'url(../anime/wizard-running.gif)'
         wizard.classList.add('dynamic');
         this.element = wizard;
         parentElement.appendChild(this.element);

@@ -5,25 +5,25 @@ function Archer_Tower(parentElement, x, y) {
     this.y = y;
     this.type = 'archer';
     this.height = 50;
-    this.width = 20;
+    this.width = 40;
     this.counter = 0;
     this.weapon = {
-        height: 3,
-        width: 30,
+        height: 2,
+        width: 10,
     };
     this.pointsNeeded = {
-        build: 100,
-        level_2: 100,
-        level_3: 100
+        build: 150,
+        level_2: 250,
+        level_3: 300
     }
-    this.damage = 400;
+    this.damage = 40;
     this.fireSpeed = 20;
-    this.fireRate = 40;
+    this.fireRate = 45;
     this.element = null;
     this.range = 140;
     this.buildTower = function() {
         var tower = document.createElement('div');
-        tower.setAttribute('style', 'height: 50px; width: 20px; position: absolute; background: green; cursor:pointer');
+        tower.setAttribute('style', 'height: 50px; width: 40px; position: absolute; background: url(./images/archer_level1.png); cursor:pointer');
         tower.setAttribute('draggable', 'true');
         tower.setAttribute('ondragstart', 'draggedElement(event,self)')
         tower.classList.add('dynamic');
@@ -35,7 +35,6 @@ function Archer_Tower(parentElement, x, y) {
     };
     this.upgrade = function() {
         this.level = this.level + 1;
-        console.log('inside the upgrade of tower', this.level)
         this.damage = this.damage + 20;
         this.fireRate = this.fireRate - 4;
         this.range = this.range + 15;
@@ -43,12 +42,10 @@ function Archer_Tower(parentElement, x, y) {
             self.element.style.background = 'pink';
         }
         if (this.level == 3) {
-            console.log('inside level3')
             self.element.style.background = 'black';
         }
     }
     this.updateXandY = function() {
-        console.log('inside archer')
         style = window.getComputedStyle(self.element);
         var top = style.getPropertyValue('top');
         var left = style.getPropertyValue('left');

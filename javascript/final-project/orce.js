@@ -3,7 +3,7 @@ function Orce(parentElement, intial_X_position, initial_Y_position, destination_
     this.element = null;
     this.id = id;
     this.maxHealth = 100;
-    this.health = 100;
+    this.health = 120;
     this.initialSpeed = 1.5;
     this.speed = 1.5;
     this.width = 12;
@@ -23,7 +23,8 @@ function Orce(parentElement, intial_X_position, initial_Y_position, destination_
     this.destIndex = 1;
     this.createOrce = function() {
         var orce = document.createElement('div');
-        orce.setAttribute('style', 'position: absolute; background: green; width: 12px; height: 18px;')
+        orce.setAttribute('style', 'position: absolute; width: 18px; height: 24px;');
+        orce.style.backgroundImage = 'url(../anime/orce-running.gif)'
         orce.classList.add('dynamic');
         this.element = orce;
         parentElement.appendChild(this.element);
