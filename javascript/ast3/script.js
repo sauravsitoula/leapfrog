@@ -134,7 +134,7 @@ function Game(parentElement, boxCount) {
             boxDiv.draw();
             boxes.push(boxDiv);
         }
-        setInterval(this.moveBoxes.bind(this), 10);
+        setInterval(this.moveBoxes.bind(this), 20);
     };
     this.moveBoxes = function() {
         var displayChecker = false;
